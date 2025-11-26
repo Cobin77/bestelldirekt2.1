@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellDirekt | Kontakt und Support</title>
+    <!-- Lade Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Konfigurieren der Hauptschriftart Inter */
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg {
+            /* Dunkler, professioneller Farbverlauf mit den neuen Farben */
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0f172a', /* NEU: Deep Navy / Slate-900 (Professionell, Autorität) */
+                        'secondary': '#1e3a8a', /* NEU: Strong Blue-800 (Tiefe, Kontrast) */
+                        'accent': '#06b6d4', /* NEU: Cyan-600 (Geschwindigkeit, Effizienz) */
+                    },
+                }
+            }
+        }
+
+        // JavaScript für das Öffnen/Schließen des mobilen Menüs
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Simuliertes Formular-Feedback (da keine echte Backend-Anbindung)
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const messageContainer = document.getElementById('form-message');
+
+            // Simuliere Ladezustand
+            messageContainer.innerHTML = '<p class="text-secondary font-medium">Ihre Nachricht wird gesendet...</p>';
+
+            setTimeout(() => {
+                // Simuliere Erfolg
+                messageContainer.innerHTML = '<p class="text-green-600 font-bold">Vielen Dank! Wir haben Ihre Nachricht erhalten und melden uns in Kürze bei Ihnen.</p>';
+                form.reset();
+            }, 1500);
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="../../index.html" class="text-2xl font-bold text-primary tracking-tight">
+                    Bestell<span class="">Direkt</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="b2b.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2B
+                        (Gewerbe)</a>
+                    <a href="b2c.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2C
+                        (Privatkunden)</a>
+                    <a href="howto.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">So
+                        funktioniert's</a>
+                    <a href="support.html"
+                        class="text-gray-600 hover:text-primary transition duration-150 font-medium">Hilfe</a>
+                    <!-- Kontakt / Angebot einholen Button -->
+                    <a href="contact.html"
+                        class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+                        title="Angebot einholen bei BestellDirekt">Kontakt</a>
+                </div>
+
+                <!-- Mobiles Menü-Button -->
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobiles Menü (ausgeblendet) -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="b2b.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2B
+                    (Gewerbe)</a>
+                <a href="b2c.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2C
+                    (Privatkunden)</a>
+                <a href="howto.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">So
+                    funktioniert's</a>
+                <a href="support.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Hilfe</a>
+                <!-- Mobiler Kontakt / Angebot einholen Button -->
+                <a href="contact.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 text-center font-semibold"
+                    title="Angebot einholen bei BestellDirekt">Angebot einholen</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Kontakt Hero Sektion -->
+    <section class="hero-bg py-16 md:py-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                Ihr direkter Draht zu uns
+            </h1>
+            <p class="text-xl font-light max-w-4xl mx-auto text-slate-300">
+                Ob Support-Anfrage, Partner-Interesse oder allgemeine Frage – wir sind für Sie da.
+            </p>
+        </div>
+    </section>
+
+    <!-- Kontaktformular und Infos -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+                <!-- Spalte 1: Kontaktinformationen -->
+                <div class="lg:col-span-1 p-6 bg-gray-50 rounded-xl shadow-lg border-l-4 border-accent">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Unternehmensdaten</h2>
+
+                    <div class="space-y-6">
+                        <!-- Adresse -->
+                        <div>
+                            <p class="text-lg font-semibold text-gray-900 flex items-center mb-1">
+                                <svg class="h-6 w-6 text-accent mr-3" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.899a2 2 0 01-2.828 0L6.343 16.657A8 8 0 1117.657 16.657z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                Hauptsitz
+                            </p>
+                            <p class="text-gray-600 pl-9">
+                                BestellDirekt UG<br>
+                                Platanenallee 12<br>
+                                87719 Mindelheim, Deutschland
+                            </p>
+                        </div>
+
+                        <!-- Telefon -->
+                        <div>
+                            <p class="text-lg font-semibold text-gray-900 flex items-center mb-1">
+                                <svg class="h-6 w-6 text-accent mr-3" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.128a4 4 0 002.583 6.642l2.257-1.128a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                Hotline (B2B & Support)
+                            </p>
+                            <a href="tel:+4915510171103"
+                                class="text-secondary hover:text-primary font-medium pl-9 transition duration-150">
+                                +49 15510 171103
+                            </a>
+                        </div>
+
+                        <!-- E-Mail -->
+                        <div>
+                            <p class="text-lg font-semibold text-gray-900 flex items-center mb-1">
+                                <svg class="h-6 w-6 text-accent mr-3" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.848 5.232a2 2 0 002.304 0L21 8m-2 1h-2a2 2 0 00-2 2v10a2 2 0 01-2 2h-4a2 2 0 01-2-2v-10a2 2 0 00-2-2H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v6" />
+                                </svg>
+                                Allgemeine Anfragen
+                            </p>
+                            <a href="mailto:info@bestelldirekt24.de"
+                                class="text-secondary hover:text-primary font-medium pl-9 transition duration-150">
+                                info@bestelldirekt24.de
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Öffnungszeiten -->
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <p class="text-lg font-semibold text-gray-900 flex items-center mb-3">
+                            <svg class="h-6 w-6 text-secondary mr-3" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Bürozeiten
+                        </p>
+                        <ul class="text-gray-600 space-y-1 pl-9">
+                            <li>Montag - Freitag: 08:00 - 18:00 Uhr</li>
+                            <li>Samstag: 09:00 - 14:00 Uhr</li>
+                            <li>Sonntag: Geschlossen (nur Kurierbetrieb)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Spalte 2 & 3: Kontaktformular -->
+                <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-2xl">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Senden Sie uns eine Nachricht</h2>
+
+                    <!-- Formular Nachrichten Container -->
+                    <div id="form-message" class="mb-4">
+                        <!-- Hier erscheinen Erfolgs- oder Fehlermeldungen -->
+                    </div>
+
+                    <form onsubmit="handleSubmit(event)" class="space-y-4">
+                        <!-- Name und E-Mail (in einer Zeile auf Desktop) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Ihr Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Ihre
+                                    E-Mail-Adresse</label>
+                                <input type="email" id="email" name="email" required
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent">
+                            </div>
+                        </div>
+
+                        <!-- Betreff -->
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Betreff</label>
+                            <select id="subject" name="subject" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent">
+                                <option value="" disabled selected>Wählen Sie den Betreff Ihrer Anfrage</option>
+                                <option value="B2B-Anfrage">B2B: Partner / Logistik-Anfrage</option>
+                                <option value="B2C-Support">B2C: Support / Probleme mit Bestellung</option>
+                                <option value="Karriere">Karriere / Bewerbung</option>
+                                <option value="Allgemein">Allgemeine Anfrage</option>
+                            </select>
+                        </div>
+
+                        <!-- Nachricht -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Ihre Nachricht</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent"></textarea>
+                        </div>
+
+                        <!-- Checkbox für Datenschutz (Wichtig für Deutschland) -->
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="privacy" name="privacy" type="checkbox" required
+                                    class="focus:ring-accent h-4 w-4 text-accent border-gray-300 rounded">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="privacy" class="font-medium text-gray-700">Ich habe die <a
+                                        href="datenschutz.html"
+                                        class="text-secondary hover:text-accent">Datenschutzerklärung</a> gelesen und
+                                    akzeptiere diese.</label>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-lg text-lg font-medium text-white bg-secondary transition duration-150 transform hover:scale-[1.01]">
+                                Nachricht senden
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="py-20 bg-lightgray">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-extrabold text-primary text-center mb-8">Unser Standort</h2>
+            <div class="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-smooth">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2666.0947969443165!2d10.492783176114847!3d48.047072779221756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f8e307b6dbe4b%3A0xb4f2cce6678c5ad4!2sPlatanenallee%2012%2C%2087719%20Mindelheim!5e0!3m2!1sde!2sde!4v1700937600000!5m2!1sde!2sde"
+                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Spalte 1: Logo & Info + Social Links -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">Bestell<span>Direkt</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">Ihr zuverlässiger Lieferpartner für Unternehmen & Privatkunden
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-4 mt-2">
+                        <a href="https://www.instagram.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a.75.75 0 11.001 1.501A.75.75 0 0116.5 6.5zm-4.25 1.75a4.25 4.25 0 110 8.5 4.25 4.25 0 010-8.5zm0 1.5a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.6 9.87v-6.99h-2.42V12h2.42V9.66c0-2.39 1.43-3.7 3.62-3.7 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/4915510171103" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.52 3.48A11.89 11.89 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.65 6L0 24l6-1.65A11.85 11.85 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.03a10 10 0 01-5.13-1.38l-.36-.22-3.62.99.97-3.53-.23-.36A9.98 9.98 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.32-7.59c-.27-.13-1.6-.79-1.85-.88-.25-.09-.44-.13-.63.13-.19.27-.75.88-.92 1.06-.17.19-.33.21-.61.07-.27-.13-1.15-.43-2.18-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.31.41-.46.14-.16.19-.27.27-.45.09-.18.05-.34-.02-.46-.07-.12-.63-1.52-.86-2.09-.23-.55-.46-.48-.63-.49l-.54-.01c-.18 0-.46.07-.7.34-.24.27-.91.88-.91 2.14s.93 2.49 1.06 2.66c.13.18 1.83 2.8 4.44 3.93.62.27 1.1.43 1.48.55.62.19 1.19.16 1.64.1.5-.07 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spalte 2: Navigation -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Bereiche</h4>
+                    <ul class="space-y-3">
+                        <li><a href="b2b.html" class="text-gray-400 hover:text-white text-sm">B2B (Gewerbe)</a></li>
+                        <li><a href="b2c.html" class="text-gray-400 hover:text-white text-sm">B2C (Privatkunden)</a>
+                        </li>
+                        <li><a href="howto.html" class="text-gray-400 hover:text-white text-sm">So funktioniert's</a>
+                        </li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white text-sm">Hilfe</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 3: Rechtliches -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Rechtliches</h4>
+                    <ul class="space-y-3">
+                        <li><a href="impressum.html" class="text-gray-400 hover:text-white text-sm">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="text-gray-400 hover:text-white text-sm">Datenschutz</a>
+                        </li>
+                        <li><a href="agb.html" class="text-gray-400 hover:text-white text-sm">AGB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 4: Kontakt -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Kontakt</h4>
+                    <p class="text-gray-400 text-sm">
+                        BestellDirekt UG<br>
+                        Platanenallee 12<br>
+                        87719 Mindelheim<br>
+                        <a href="tel:+49123456789" class="hover:text-white block mt-2">Tel: +49 15510 171103</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-center text-sm text-gray-400">&copy; 2025 BestellDirekt GmbH. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

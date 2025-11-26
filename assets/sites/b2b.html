@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellDirekt | B2B Logistiklösungen</title>
+    <!-- Lade Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Konfigurieren der Hauptschriftart Inter */
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg-b2b {
+            /* Dunkler, professioneller Farbverlauf mit den neuen Farben */
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0f172a', /* NEU: Deep Navy / Slate-900 (Professionell, Autorität) */
+                        'secondary': '#1e3a8a', /* NEU: Strong Blue-800 (Tiefe, Kontrast) */
+                        'accent': '#06b6d4', /* NEU: Cyan-600 (Geschwindigkeit, Effizienz) */
+                    },
+                }
+            }
+        }
+
+        // JavaScript für das Öffnen/Schließen des mobilen Menüs
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="../../index.html" class="text-2xl font-bold text-primary tracking-tight">
+                    Bestell<span class="">Direkt</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="b2b.html"
+                        class="text-secondary font-bold transition duration-150 border-b-2 border-secondary">B2B
+                        (Gewerbe)</a>
+                    <a href="b2c.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2C
+                        (Privatkunden)</a>
+                    <a href="howto.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">So
+                        funktioniert's</a>
+                    <a href="support.html"
+                        class="text-gray-600 hover:text-primary transition duration-150 font-medium">Hilfe</a>
+                    <!-- Kontakt / Angebot einholen Button -->
+                    <a href="contact.html"
+                        class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+                        title="Angebot einholen bei BestellDirekt">Kontakt</a>
+                </div>
+
+                <!-- Mobiles Menü-Button -->
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobiles Menü (ausgeblendet) -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="b2b.html" onclick="toggleMobileMenu()"
+                    class="text-secondary font-bold transition duration-150 border-b-2 border-secondary">B2B
+                    (Gewerbe)</a>
+                <a href="b2c.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2C
+                    (Privatkunden)</a>
+                <a href="howto.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">So
+                    funktioniert's</a>
+                <a href="support.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Hilfe</a>
+                <!-- Mobiler Kontakt / Angebot einholen Button -->
+                <a href="contact.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 text-center font-semibold"
+                    title="Angebot einholen bei BestellDirekt">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- B2B Hero Sektion -->
+    <section class="hero-bg-b2b text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-base text-accent font-semibold tracking-wide uppercase mb-3">Logistik für Unternehmen</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                Skalierbare Logistiklösungen für Ihr Geschäftswachstum.
+            </h1>
+            <p class="text-xl font-light mb-10 max-w-4xl mx-auto text-slate-300">
+                Verlassen Sie sich auf unsere digitale Infrastruktur und unser lokales Netzwerk, um Ihre Lieferkette
+                effizient und transparent zu gestalten.
+            </p>
+            <a href="#anfrage"
+                class="inline-block px-10 py-4 bg-accent text-white font-semibold text-lg rounded-xl shadow-lg hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
+                Jetzt unverbindliche Beratung anfordern
+            </a>
+        </div>
+    </section>
+
+    <!-- Key Value Propositions (3 Spalten) -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Ihr Vorteil mit BestellDirekt</h2>
+                <p class="mt-4 text-xl text-gray-500 max-w-3xl mx-auto">
+                    Wir bieten mehr als nur Transport – wir liefern Ihnen Wettbewerbsvorteile.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- VP 1: Effizienz -->
+                <div
+                    class="text-center p-6 rounded-xl border-t-4 border-accent shadow-md hover:shadow-xl transition duration-300">
+                    <div
+                        class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-accent bg-opacity-10 text-accent mb-4">
+                        <!-- Icon: Zahnrad / Effizienz -->
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.568.342 1.258.125 1.724-.106zm-2.008 4.707a3 3 0 10-2.006 3.006A2.998 2.998 0 0010 11z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Maximale Kosteneffizienz</h3>
+                    <p class="text-gray-600">
+                        Durch intelligente Routenoptimierung und gebündelte Touren reduzieren wir Ihre Logistikkosten
+                        ohne Kompromisse bei der Geschwindigkeit.
+                    </p>
+                </div>
+
+                <!-- VP 2: Transparenz -->
+                <div
+                    class="text-center p-6 rounded-xl border-t-4 border-secondary shadow-md hover:shadow-xl transition duration-300">
+                    <div
+                        class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-secondary bg-opacity-10 text-secondary mb-4">
+                        <!-- Icon: Dashboard / Transparenz -->
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0h-2M9 19H7m-2-4h2m10 4v-6a2 2 0 00-2-2h-2a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0h-2m2 0h-2m-2-4h2m-4-6h-2m-2 4h4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Echtzeit-Transparenz</h3>
+                    <p class="text-gray-600">
+                        Über unsere Partner-API und das Online-Dashboard verfolgen Sie jede Sendung von der Abholung bis
+                        zum digitalen Abliefernachweis.
+                    </p>
+                </div>
+
+                <!-- VP 3: Zuverlässigkeit -->
+                <div
+                    class="text-center p-6 rounded-xl border-t-4 border-primary shadow-md hover:shadow-xl transition duration-300">
+                    <div
+                        class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-primary bg-opacity-10 text-primary mb-4">
+                        <!-- Icon: Schild / Zuverlässigkeit -->
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.79A2.003 2.003 0 0015.022 1v3m-2 16h6a2 2 0 002-2V7a2 2 0 00-2-2h-6m-7 4l-4-4m-2 2h4a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Pünktliche Last-Mile</h3>
+                    <p class="text-gray-600">
+                        Wir garantieren die Einhaltung Ihrer Lieferfenster. Unsere geschulten Kuriere sind Spezialisten
+                        für die lokale "letzte Meile".
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branchen-Sektion -->
+    <section class="py-16 md:py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-secondary font-semibold tracking-wide uppercase">Branchen, denen wir vertrauen
+                </h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Spezialisierte Logistik für jede Anforderung
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Branche 1: Automotive/Teile -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-primary mb-3">
+                        <svg class="h-8 w-8 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm7 6h-4l-2 5h-2l2-5h-4l-2 5h-2l2-5H5l-2 5H1M3 3h20M3 21h20" />
+                        </svg>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-900">Automobilindustrie</p>
+                    <span class="text-sm text-gray-500">JIT- & Ersatzteillieferungen</span>
+                </div>
+
+                <!-- Branche 2: Pharma/Medizin -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-primary mb-3">
+                        <svg class="h-8 w-8 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.79A2.003 2.003 0 0015.022 1v3m-2 16h6a2 2 0 002-2V7a2 2 0 00-2-2h-6m-7 4l-4-4m-2 2h4a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v10" />
+                        </svg>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-900">Pharma & Labore</p>
+                    <span class="text-sm text-gray-500">Kühlketten- und Eillieferungen</span>
+                </div>
+
+                <!-- Branche 3: E-Commerce -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-primary mb-3">
+                        <svg class="h-8 w-8 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4h4m-4-4v4m-1.5 4l-2-2-4 4-2-2-4 4" />
+                        </svg>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-900">Online-Handel</p>
+                    <span class="text-sm text-gray-500">Same-Day- und Next-Day-Zustellung</span>
+                </div>
+
+                <!-- Branche 4: Baugewerbe -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-primary mb-3">
+                        <svg class="h-8 w-8 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0l3 3m-3-3l-3 3m-3-3l3-3m-3 3l3 3m-3-3l-3 3m-3-3l3-3" />
+                        </svg>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-900">Handwerk & Bau</p>
+                    <span class="text-sm text-gray-500">Werkzeuge und Material-Eillieferungen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Kontakt Formular CTA -->
+    <section id="anfrage" class="bg-primary py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <!-- Text Block -->
+                <div class="text-white mb-10 lg:mb-0">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                        Lassen Sie uns über Ihre Logistik sprechen.
+                    </h2>
+                    <p class="mt-4 text-xl text-slate-300">
+                        Jedes Unternehmen hat individuelle Anforderungen. Fordern Sie jetzt ein unverbindliches,
+                        maßgeschneidertes Angebot an.
+                    </p>
+                    <div class="mt-6 space-y-3">
+                        <p class="flex items-center text-slate-200">
+                            <svg class="flex-shrink-0 h-6 w-6 text-accent mr-2" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Kostenanalyse Ihrer aktuellen Struktur
+                        </p>
+                        <p class="flex items-center text-slate-200">
+                            <svg class="flex-shrink-0 h-6 w-6 text-accent mr-2" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Persönlicher Ansprechpartner
+                        </p>
+                        <p class="flex items-center text-slate-200">
+                            <svg class="flex-shrink-0 h-6 w-6 text-accent mr-2" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Unverbindliche Kapazitätsplanung
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kontakt Formular (Simuliert) -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Ihre Anfrage</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="firma" class="block text-sm font-medium text-gray-700">Firma</label>
+                            <input type="text" id="firma" name="firma" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">E-Mail</label>
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent">
+                        </div>
+                        <div>
+                            <label for="bedarf" class="block text-sm font-medium text-gray-700">Kurzbeschreibung des
+                                Bedarfs</label>
+                            <textarea id="bedarf" name="bedarf" rows="3" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent"></textarea>
+                        </div>
+                        <div class="pt-4">
+                            <button type="submit"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-lg text-lg font-medium text-white bg-secondary hover:bg-blue-900 transition duration-150">
+                                Anfrage absenden
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Spalte 1: Logo & Info + Social Links -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">Bestell<span>Direkt</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">Ihr zuverlässiger Lieferpartner für Unternehmen & Privatkunden
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-4 mt-2">
+                        <a href="https://www.instagram.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a.75.75 0 11.001 1.501A.75.75 0 0116.5 6.5zm-4.25 1.75a4.25 4.25 0 110 8.5 4.25 4.25 0 010-8.5zm0 1.5a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.6 9.87v-6.99h-2.42V12h2.42V9.66c0-2.39 1.43-3.7 3.62-3.7 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/4915510171103" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.52 3.48A11.89 11.89 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.65 6L0 24l6-1.65A11.85 11.85 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.03a10 10 0 01-5.13-1.38l-.36-.22-3.62.99.97-3.53-.23-.36A9.98 9.98 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.32-7.59c-.27-.13-1.6-.79-1.85-.88-.25-.09-.44-.13-.63.13-.19.27-.75.88-.92 1.06-.17.19-.33.21-.61.07-.27-.13-1.15-.43-2.18-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.31.41-.46.14-.16.19-.27.27-.45.09-.18.05-.34-.02-.46-.07-.12-.63-1.52-.86-2.09-.23-.55-.46-.48-.63-.49l-.54-.01c-.18 0-.46.07-.7.34-.24.27-.91.88-.91 2.14s.93 2.49 1.06 2.66c.13.18 1.83 2.8 4.44 3.93.62.27 1.1.43 1.48.55.62.19 1.19.16 1.64.1.5-.07 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spalte 2: Navigation -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Bereiche</h4>
+                    <ul class="space-y-3">
+                        <li><a href="b2b.html"
+                                class="text-gray-400 hover:text-white text-sm font-bold border-b border-accent">B2B
+                                (Gewerbe)</a></li>
+                        <li><a href="b2c.html" class="text-gray-400 hover:text-white text-sm">B2C (Privatkunden)</a>
+                        </li>
+                        <li><a href="howto.html" class="text-gray-400 hover:text-white text-sm">So funktioniert's</a>
+                        </li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white text-sm">Hilfe</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 3: Rechtliches -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Rechtliches</h4>
+                    <ul class="space-y-3">
+                        <li><a href="impressum.html" class="text-gray-400 hover:text-white text-sm">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="text-gray-400 hover:text-white text-sm">Datenschutz</a>
+                        </li>
+                        <li><a href="agb.html" class="text-gray-400 hover:text-white text-sm">AGB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 4: Kontakt -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Kontakt</h4>
+                    <p class="text-gray-400 text-sm">
+                        BestellDirekt UG<br>
+                        Platanenallee 12<br>
+                        87719 Mindelheim<br>
+                        <a href="tel:+49123456789" class="hover:text-white block mt-2">Tel: +49 15510 171103</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-center text-sm text-gray-400">&copy; 2025 BestellDirekt GmbH. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

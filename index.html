@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellDirekt | Ihr lokaler Lieferdienst (B2B & B2C)</title>
+    <!-- Lade Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Konfigurieren der Hauptschriftart Inter */
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg {
+            /* Dunkler, professioneller Farbverlauf mit den neuen Farben */
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0f172a', /* NEU: Deep Navy / Slate-900 (Professionell, Autorität) */
+                        'secondary': '#1e3a8a', /* NEU: Strong Blue-800 (Tiefe, Kontrast) */
+                        'accent': '#06b6d4', /* NEU: Cyan-600 (Geschwindigkeit, Effizienz) */
+                    },
+                }
+            }
+        }
+
+        // JavaScript für das Öffnen/Schließen des mobilen Menüs
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-primary tracking-tight">
+                    Bestell<span class="">Direkt</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="assets/sites/b2b.html"
+                        class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2B
+                        (Gewerbe)</a>
+                    <a href="assets/sites/b2c.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2C
+                        (Privatkunden)</a>
+                    <a href="assets/sites/howto.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">So
+                        funktioniert's</a>
+                    <a href="assets/sites/support.html"
+                        class="text-gray-600 hover:text-primary transition duration-150 font-medium">Hilfe</a>
+                    <!-- Kontakt / Angebot einholen Button -->
+                    <a href="assets/sites/contact.html"
+                        class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+                        title="Angebot einholen bei BestellDirekt">Kontakt</a>
+                </div>
+
+                <!-- Mobiles Menü-Button -->
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobiles Menü (ausgeblendet) -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="assets/sites/b2b.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2B
+                    (Gewerbe)</a>
+                <a href="assets/sites/b2c.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2C
+                    (Privatkunden)</a>
+                <a href="assets/sites/howto.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">So
+                    funktioniert's</a>
+                <a href="assets/sites/support.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Hilfe</a>
+                <a href="assets/sites/contact.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 text-center font-semibold"
+                    title="Angebot einholen bei BestellDirekt">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Sektion -->
+    <section id="hero" class="hero-bg text-white py-16 md:py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                Ihre lokale Lieferung – schnell, zuverlässig, digital.
+            </h1>
+            <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto">
+                BestellDirekt ist Ihr lokaler Partner für Business- und Privatlieferungen. Wir verbinden die Region.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="assets/sites/b2b.html"
+                    class="inline-block px-8 py-3 bg-accent text-white font-semibold rounded-xl shadow-lg hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
+                    Lösungen für Ihr Geschäft (B2B)
+                </a>
+                <a href="assets/sites/b2c.html"
+                    class="inline-block px-8 py-3 bg-white text-primary font-semibold rounded-xl shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                    Als Privatkunde bestellen (B2C)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Services (Gewerbe) -->
+    <section id="b2b" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-primary font-semibold tracking-wide uppercase">BestellDirekt für Unternehmen
+                </h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Maßgeschneiderte Logistiklösungen für Ihr Wachstum
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Wir optimieren Ihre Lieferkette, damit Sie sich auf Ihr Kerngeschäft konzentrieren können. Von der
+                    Last-Mile-Zustellung bis zur internen Logistik.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
+                    <!-- Feature 1 -->
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-xl bg-primary text-white">
+                                <!-- Icon: Lkw -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 16l-4-4m0 0l4-4m-4 4h14m-12 7l1.673 1.673A4.5 4.5 0 0014.24 16H10a4 4 0 110-8h4.24a4.5 4.5 0 00-2.567 1.327L11 9" />
+                                </svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Eil- und Expresslieferungen</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Schnelle Abholung und Zustellung dringender Dokumente, Ersatzteile oder Waren – direkt in
+                            der Region.
+                        </dd>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-xl bg-primary text-white">
+                                <!-- Icon: Lager -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7h16M4 11h16M4 15h16" />
+                                </svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Regelmäßige Tourenplanung</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Optimieren Sie Ihre festen Routen und sparen Sie Kosten durch unsere effiziente, gebündelte
+                            Zustellung.
+                        </dd>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-xl bg-primary text-white">
+                                <!-- Icon: Tracking -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Digitales Sendungs-Tracking</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Volle Transparenz: Verfolgen Sie jede Sendung in Echtzeit und erhalten Sie digitale
+                            Liefernachweise.
+                        </dd>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-xl bg-primary text-white">
+                                <!-- Icon: Schüttgut -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2l-2 5h10l2-5h2a2 2 0 002-2V9a2 2 0 00-2-2h-5" />
+                                </svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Spezial- und Kühltransporte</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Transport von sensiblen Gütern, Lebensmittelmustern oder palettierter Ware unter
+                            spezifischen Bedingungen.
+                        </dd>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <a href="assets/sites/contact.html"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-secondary hover:bg-blue-900 transition duration-150">
+                    Unverbindliches B2B-Angebot anfordern
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2C Services (Privatkunden) -->
+    <section id="b2c" class="py-16 md:py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-accent font-semibold tracking-wide uppercase">BestellDirekt für Zuhause</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Ihre Region, direkt an Ihre Haustür
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Bestellen Sie bei lokalen Märkten, Apotheken oder Restaurants – wir liefern es Ihnen bequem und
+                    schnell.
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-10 md:grid-cols-3">
+                <!-- Card 1: Lokale Märkte -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <div class="text-accent mb-4">
+                        <!-- Icon: Einkaufswagen -->
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Lebensmittel & Märkte</h3>
+                    <p class="text-gray-500">
+                        Frisches Obst, Gemüse, Backwaren und mehr von Ihren Lieblingsanbietern – direkt aus der Region,
+                        am selben Tag geliefert.
+                    </p>
+                </div>
+
+                <!-- Card 2: Restaurants -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <div class="text-accent mb-4">
+                        <!-- Icon: Essen -->
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Mittagessen & Abendessen</h3>
+                    <p class="text-gray-500">
+                        Lassen Sie sich Ihre Mahlzeiten von den besten Restaurants der Stadt liefern. Heiß, schnell und
+                        ohne Umwege.
+                    </p>
+                </div>
+
+                <!-- Card 3: Kurierdienst -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <div class="text-accent mb-4">
+                        <!-- Icon: Päckchen -->
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7m16 0-8 4m-8-4l8 4m-8-4V4a2 2 0 012-2h4a2 2 0 012 2v3m-4 5h4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Persönlicher Kurier</h3>
+                    <p class="text-gray-500">
+                        Sie müssen etwas abholen oder versenden? Wir fungieren als Ihr persönlicher Bote für Besorgungen
+                        und kleine Transporte.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <a href="#"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-accent hover:bg-cyan-700 transition duration-150">
+                    Zur lokalen Bestellplattform (Bald verfügbar)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prozess Sektion (So Funktioniert's) -->
+    <section id="prozess" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Der BestellDirekt Prozess</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    In 3 einfachen Schritten zur Lieferung
+                </p>
+            </div>
+
+            <div class="relative mt-10">
+                <!-- Verbindungslinie (nur auf Desktop sichtbar) -->
+                <div class="hidden md:block absolute inset-0 h-1 w-full bg-gray-200 mt-8"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                    <!-- Schritt 1 -->
+                    <div class="relative z-10 p-4">
+                        <div
+                            class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-primary text-white font-bold text-2xl mb-4 shadow-lg ring-4 ring-white">
+                            1</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Auftrag erteilen</h3>
+                        <p class="text-gray-500">
+                            Sie geben Ihre Bestellung über unsere Plattform auf oder kontaktieren uns für eine
+                            B2B-Abwicklung.
+                        </p>
+                    </div>
+
+                    <!-- Schritt 2 -->
+                    <div class="relative z-10 p-4">
+                        <div
+                            class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-primary text-white font-bold text-2xl mb-4 shadow-lg ring-4 ring-white">
+                            2</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Abholung & Sortierung</h3>
+                        <p class="text-gray-500">
+                            Wir holen die Ware beim Händler/Versender ab und bereiten sie für die effiziente Zustellung
+                            vor.
+                        </p>
+                    </div>
+
+                    <!-- Schritt 3 -->
+                    <div class="relative z-10 p-4">
+                        <div
+                            class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-primary text-white font-bold text-2xl mb-4 shadow-lg ring-4 ring-white">
+                            3</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Schnelle Zustellung</h3>
+                        <p class="text-gray-500">
+                            Ihr BestellDirekt Kurier liefert die Sendung pünktlich und direkt an den gewünschten
+                            Zielort.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Kontakt Sektion -->
+    <section id="kontakt" class="bg-secondary py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                Bereit für eine zuverlässige Lieferung?
+            </h2>
+            <p class="mt-4 text-xl text-slate-300">
+                Egal ob Geschäftskunde oder Privatperson – wir freuen uns auf Ihre Anfrage.
+            </p>
+            <div class="mt-8">
+                <a href="mailto:info@bestelldirekt24.de"
+                    class="inline-flex items-center px-8 py-4 border border-transparent text-base font-semibold rounded-xl shadow-lg text-primary bg-accent hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
+                    <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    info@bestelldirekt24.de
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Spalte 1: Logo & Info + Social Links -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">Bestell<span>Direkt</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">Ihr zuverlässiger Lieferpartner für Unternehmen & Privatkunden
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-4 mt-2">
+                        <a href="https://www.instagram.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a.75.75 0 11.001 1.501A.75.75 0 0116.5 6.5zm-4.25 1.75a4.25 4.25 0 110 8.5 4.25 4.25 0 010-8.5zm0 1.5a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.6 9.87v-6.99h-2.42V12h2.42V9.66c0-2.39 1.43-3.7 3.62-3.7 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/4915510171103" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.52 3.48A11.89 11.89 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.65 6L0 24l6-1.65A11.85 11.85 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.03a10 10 0 01-5.13-1.38l-.36-.22-3.62.99.97-3.53-.23-.36A9.98 9.98 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.32-7.59c-.27-.13-1.6-.79-1.85-.88-.25-.09-.44-.13-.63.13-.19.27-.75.88-.92 1.06-.17.19-.33.21-.61.07-.27-.13-1.15-.43-2.18-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.31.41-.46.14-.16.19-.27.27-.45.09-.18.05-.34-.02-.46-.07-.12-.63-1.52-.86-2.09-.23-.55-.46-.48-.63-.49l-.54-.01c-.18 0-.46.07-.7.34-.24.27-.91.88-.91 2.14s.93 2.49 1.06 2.66c.13.18 1.83 2.8 4.44 3.93.62.27 1.1.43 1.48.55.62.19 1.19.16 1.64.1.5-.07 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spalte 2: Navigation -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Bereiche</h4>
+                    <ul class="space-y-3">
+                        <li><a href="b2b.html" class="text-gray-400 hover:text-white text-sm">B2B (Gewerbe)</a></li>
+                        <li><a href="b2c.html" class="text-gray-400 hover:text-white text-sm">B2C (Privatkunden)</a>
+                        </li>
+                        <li><a href="howto.html" class="text-gray-400 hover:text-white text-sm">So funktioniert's</a>
+                        </li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white text-sm">Hilfe</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 3: Rechtliches -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Rechtliches</h4>
+                    <ul class="space-y-3">
+                        <li><a href="impressum.html" class="text-gray-400 hover:text-white text-sm">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="text-gray-400 hover:text-white text-sm">Datenschutz</a>
+                        </li>
+                        <li><a href="agb.html" class="text-gray-400 hover:text-white text-sm">AGB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 4: Kontakt -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Kontakt</h4>
+                    <p class="text-gray-400 text-sm">
+                        BestellDirekt UG<br>
+                        Platanenallee 12<br>
+                        87719 Mindelheim<br>
+                        <a href="tel:+49123456789" class="hover:text-white block mt-2">Tel: +49 15510 171103</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-center text-sm text-gray-400">&copy; 2025 BestellDirekt GmbH. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellDirekt | Rechtliches</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html { font-family: 'Inter', sans-serif; }
+
+        .content-container h2 {
+            margin-top: 3rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: #0f172a;
+        }
+        .content-container h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+        .content-container p, .content-container ul {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+            color: #4b5563;
+        }
+        .content-container ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0f172a',
+                        'secondary': '#1e3a8a',
+                        'accent': '#06b6d4',
+                    },
+                }
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-primary tracking-tight">
+                    Bestell<span class="text-accent">Direkt</span>
+                </a>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="b2b.html" class="text-gray-600 hover:text-primary font-medium">B2B</a>
+                    <a href="b2c.html" class="text-gray-600 hover:text-primary font-medium">B2C</a>
+                    <a href="kontakt.html" class="text-gray-600 hover:text-primary font-medium">Kontakt</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="b2b.html" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-gray-100">B2B</a>
+                <a href="b2c.html" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-gray-100">B2C</a>
+                <a href="kontakt.html" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-gray-100">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-primary py-12 md:py-16 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-base font-semibold tracking-wide uppercase text-accent mb-2">Rechtliches & Informationen</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                Rechtliche Hinweise
+            </h1>
+            <p class="text-xl font-light max-w-3xl text-slate-300 mt-2">
+                Alle wichtigen rechtlichen Informationen zu BestellDirekt.
+            </p>
+        </div>
+    </section>
+
+    <!-- INHALT -->
+    <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="max-w-4xl mx-auto content-container">
+
+                <h2>Einführung</h2>
+                <p>
+                    Hier kannst du den kompletten Inhalt einfügen, den du brauchst.  
+                    Die gesamte Struktur, Typografie und Aufteilung entspricht exakt deiner Datenschutzseite.
+                </p>
+
+                <h2>Beispiel Abschnitt</h2>
+                <p>
+                    Dieser Abschnitt dient als Platzhalter für deinen gewünschten Text.  
+                    Du kannst hier deinen rechtlichen Text, Unternehmensbeschreibung oder Hinweise einfügen.
+                </p>
+
+                <h3>Unterpunkt als Beispiel</h3>
+                <p>
+                    Auch Unterkapitel sind exakt wie in der Datenschutzseite formatiert.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="bg-white py-20 border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold text-primary">Bereit für die Zusammenarbeit?</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Wir liefern zuverlässig, schnell und modern – für Unternehmen & Privatkunden.
+            </p>
+            <a href="kontakt.html"
+               class="mt-8 inline-block bg-accent text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary transition">
+                Kontakt aufnehmen
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4">Bestell<span class="text-accent">Direkt</span></h3>
+                    <p class="text-gray-400 text-sm">
+                        Lokaler Lieferservice für die Region. Schnell. Zuverlässig. Modern.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-semibold uppercase mb-4">Bereiche</h4>
+                    <ul class="space-y-3">
+                        <li><a href="b2b.html" class="text-gray-400 hover:text-white text-sm">B2B</a></li>
+                        <li><a href="b2c.html" class="text-gray-400 hover:text-white text-sm">B2C</a></li>
+                        <li><a href="index.html#prozess" class="text-gray-400 hover:text-white text-sm">Ablauf</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-semibold uppercase mb-4">Rechtliches</h4>
+                    <ul class="space-y-3">
+                        <li><a href="agb.html" class="text-gray-400 hover:text-white text-sm">AGB</a></li>
+                        <li><a href="impressum.html" class="text-gray-400 hover:text-white text-sm">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="text-gray-400 hover:text-white text-sm">Datenschutz</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-semibold uppercase mb-4">Kontakt</h4>
+                    <p class="text-gray-400 text-sm">
+                        BestellDirekt GmbH<br>
+                        Musterstraße 1<br>
+                        12345 Musterstadt<br>
+                        <a href="tel:+49123456789" class="hover:text-white block mt-2">Tel: 0123 / 456 789</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-center text-sm text-gray-400">
+                    &copy; 2024 BestellDirekt GmbH. Alle Rechte vorbehalten.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

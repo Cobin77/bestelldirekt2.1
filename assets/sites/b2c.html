@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellDirekt | Privatkunden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg-b2c {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0f172a',
+                        'secondary': '#1e3a8a',
+                        'accent': '#06b6d4',
+                    },
+                }
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../../index.html"
+                    class="text-2xl font-bold text-primary tracking-tight">Bestell<span>Direkt</span></a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="b2b.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2B
+                        (Gewerbe)</a>
+                    <a href="b2c.html"
+                        class="text-secondary font-bold border-b-2 border-secondary transition duration-150">B2C
+                        (Privatkunden)</a>
+                    <a href="howto.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">So
+                        funktioniert's</a>
+                    <a href="support.html"
+                        class="text-gray-600 hover:text-primary transition duration-150 font-medium">Hilfe</a>
+                    <a href="contact.html"
+                        class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">Kontakt</a>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="b2b.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2B
+                    (Gewerbe)</a>
+                <a href="b2c.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-secondary font-bold border-b-2 border-secondary">B2C
+                    (Privatkunden)</a>
+                <a href="howto.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">So
+                    funktioniert's</a>
+                <a href="support.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Hilfe</a>
+                <a href="contact.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 text-center font-semibold">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-bg-b2c text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-base text-accent font-semibold tracking-wide uppercase mb-3">Direkt zu Ihnen nach Hause</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Ihre Lieblingsprodukte
+                schnell und zuverlässig geliefert.</h1>
+            <p class="text-xl font-light mb-10 max-w-3xl mx-auto text-slate-200">Bestellen Sie Snacks, Getränke und
+                Lebensmittel bequem online – wir bringen alles direkt zu Ihnen nach Hause.</p>
+            <a href="#bestellen"
+                class="inline-block px-10 py-4 bg-accent text-white font-semibold text-lg rounded-xl shadow-lg hover:bg-cyan-700 transition duration-300 transform hover:scale-105">Jetzt
+                bestellen</a>
+        </div>
+    </section>
+
+    <!-- Vorteile -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Warum BestellDirekt?</h2>
+                <p class="mt-4 text-xl text-gray-500 max-w-3xl mx-auto">Einfach, schnell und bequem – profitieren Sie
+                    von unserem lokalen Lieferservice.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Lieferung -->
+                <div
+                    class="text-center p-6 rounded-xl border-t-4 border-accent shadow-md hover:shadow-xl transition duration-300">
+                    <div
+                        class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-accent bg-opacity-10 text-accent mb-4">
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Schnelle Lieferung</h3>
+                    <p class="text-gray-600">Ihre Bestellung kommt zuverlässig und direkt zu Ihnen – ohne Umwege.</p>
+                </div>
+                <!-- Auswahl -->
+                <div
+                    class="text-center p-6 rounded-xl border-t-4 border-secondary shadow-md hover:shadow-xl transition duration-300">
+                    <div
+                        class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-secondary bg-opacity-10 text-secondary mb-4">
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Große Auswahl</h3>
+                    <p class="text-gray-600">Snacks, Getränke und Lebensmittel – alles in einer Bestellung bequem
+                        verfügbar.</p>
+                </div>
+                <!-- Service -->
+                <div
+                    class="text-center p-6 rounded-xl border-t-4 border-primary shadow-md hover:shadow-xl transition duration-300">
+                    <div
+                        class="flex items-center justify-center mx-auto h-16 w-16 rounded-full bg-primary bg-opacity-10 text-primary mb-4">
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l9-5-9-5-9 5 9 5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Persönlicher Service</h3>
+                    <p class="text-gray-600">Wir sind immer für Sie da – Fragen oder Sonderwünsche? Kein Problem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- So funktioniert's -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">So einfach funktioniert BestellDirekt
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-4 text-accent">1️⃣</div>
+                    <h3 class="text-xl font-bold mb-2">Produkt auswählen</h3>
+                    <p class="text-gray-600">Stöbern Sie durch unser Sortiment und wählen Sie Ihre gewünschten Produkte
+                        aus.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-4 text-accent">2️⃣</div>
+                    <h3 class="text-xl font-bold mb-2">Bestellung abschicken</h3>
+                    <p class="text-gray-600">Senden Sie Ihre Bestellung direkt über WhatsApp oder unser Online-Formular
+                        ab.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300">
+                    <div class="text-4xl mb-4 text-accent">3️⃣</div>
+                    <h3 class="text-xl font-bold mb-2">Lieferung erhalten</h3>
+                    <p class="text-gray-600">Wir liefern Ihre Bestellung zuverlässig an die gewünschte Adresse –
+                        pünktlich und unkompliziert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Bestellung -->
+    <section id="bestellen" class="bg-gray-100 py-16 md:py-24 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">Jetzt Ihre Lieblingsprodukte bestellen
+            </h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Einfach auswählen, bestellen und liefern lassen – so
+                unkompliziert ist BestellDirekt.</p>
+            <a href="whatsapp://send?text=Ich%20möchte%20bestellen"
+                class="inline-block px-10 py-4 bg-accent text-white font-semibold text-lg rounded-xl shadow-lg hover:bg-cyan-700 transition duration-300">Über
+                WhatsApp bestellen</a>
+        </div>
+    </section>
+
+    <!-- Vertrauen / Testimonials -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">Darauf vertrauen unsere Kunden</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+                    <p class="text-gray-600 mb-4">"Super schnelle Lieferung, alles top verpackt und pünktlich
+                        angekommen!"</p>
+                    <p class="font-semibold text-gray-800">– Anna S., Mindelheim</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+                    <p class="text-gray-600 mb-4">"Große Auswahl und sehr freundlicher Service. Immer wieder gerne."</p>
+                    <p class="font-semibold text-gray-800">– Markus L., Mindelheim</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
+                    <p class="text-gray-600 mb-4">"BestellDirekt macht Online-Bestellen endlich einfach und
+                        zuverlässig!"</p>
+                    <p class="font-semibold text-gray-800">– Julia K., Memmingen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Spalte 1: Logo & Info + Social Links -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">Bestell<span>Direkt</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">Ihr zuverlässiger Lieferpartner für Unternehmen & Privatkunden
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-4 mt-2">
+                        <a href="https://www.instagram.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a.75.75 0 11.001 1.501A.75.75 0 0116.5 6.5zm-4.25 1.75a4.25 4.25 0 110 8.5 4.25 4.25 0 010-8.5zm0 1.5a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.6 9.87v-6.99h-2.42V12h2.42V9.66c0-2.39 1.43-3.7 3.62-3.7 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/4915510171103" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.52 3.48A11.89 11.89 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.65 6L0 24l6-1.65A11.85 11.85 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.03a10 10 0 01-5.13-1.38l-.36-.22-3.62.99.97-3.53-.23-.36A9.98 9.98 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.32-7.59c-.27-.13-1.6-.79-1.85-.88-.25-.09-.44-.13-.63.13-.19.27-.75.88-.92 1.06-.17.19-.33.21-.61.07-.27-.13-1.15-.43-2.18-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.31.41-.46.14-.16.19-.27.27-.45.09-.18.05-.34-.02-.46-.07-.12-.63-1.52-.86-2.09-.23-.55-.46-.48-.63-.49l-.54-.01c-.18 0-.46.07-.7.34-.24.27-.91.88-.91 2.14s.93 2.49 1.06 2.66c.13.18 1.83 2.8 4.44 3.93.62.27 1.1.43 1.48.55.62.19 1.19.16 1.64.1.5-.07 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Bereiche</h4>
+                    <ul class="space-y-3">
+                        <li><a href="b2b.html" class="text-gray-400 hover:text-white text-sm">B2B (Gewerbe)</a></li>
+                        <li><a href="b2c.html"
+                                class="text-gray-400 hover:text-white text-sm font-bold border-b border-accent">B2C
+                                (Privatkunden)</a></li>
+                        <li><a href="howto.html" class="text-gray-400 hover:text-white text-sm">So funktioniert's</a>
+                        </li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white text-sm">Hilfe</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Rechtliches</h4>
+                    <ul class="space-y-3">
+                        <li><a href="impressum.html" class="text-gray-400 hover:text-white text-sm">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="text-gray-400 hover:text-white text-sm">Datenschutz</a>
+                        </li>
+                        <li><a href="agb.html" class="text-gray-400 hover:text-white text-sm">AGB</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Kontakt</h4>
+                    <p class="text-gray-400 text-sm">
+                        BestellDirekt UG<br>
+                        Platanenallee 12<br>
+                        87719 Mindelheim<br>
+                        <a href="tel:+4915510171103" class="hover:text-white block mt-2">Tel: +49 15510 171103</a>
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-center text-sm text-gray-400">&copy; 2025 BestellDirekt UG. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

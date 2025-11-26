@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellDirekt | Allgemeine Geschäftsbedingungen (AGB)</title>
+    <!-- Lade Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Konfigurieren der Hauptschriftart Inter */
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .content-container h2 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            /* text-2xl */
+            font-weight: 700;
+            /* font-bold */
+            color: #0f172a;
+            /* primary */
+        }
+
+        .content-container h3 {
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            /* text-xl */
+            font-weight: 600;
+            /* font-semibold */
+            color: #1e3a8a;
+            /* secondary */
+        }
+
+        .content-container p,
+        .content-container li {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+            color: #4b5563;
+            /* text-gray-600 */
+        }
+    </style>
+    <script>
+        // Konfigurieren der professionellen Farbpalette
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0f172a', /* Deep Navy / Slate-900 */
+                        'secondary': '#1e3a8a', /* Strong Blue-800 */
+                        'accent': '#06b6d4', /* Cyan-600 */
+                    },
+                }
+            }
+        }
+
+        // JavaScript für das Öffnen/Schließen des mobilen Menüs
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="../../index.html" class="text-2xl font-bold text-primary tracking-tight">
+                    Bestell<span class="">Direkt</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="b2b.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2B
+                        (Gewerbe)</a>
+                    <a href="b2c.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2C
+                        (Privatkunden)</a>
+                    <a href="howto.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">So
+                        funktioniert's</a>
+                    <a href="support.html"
+                        class="text-gray-600 hover:text-primary transition duration-150 font-medium">Hilfe</a>
+                    <!-- Kontakt / Angebot einholen Button -->
+                    <a href="contact.html"
+                        class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+                        title="Angebot einholen bei BestellDirekt">Kontakt</a>
+                </div>
+
+                <!-- Mobiles Menü-Button -->
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobiles Menü (ausgeblendet) -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="b2b.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2B
+                    (Gewerbe)</a>
+                <a href="b2c.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2C
+                    (Privatkunden)</a>
+                <a href="howto.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">So
+                    funktioniert's</a>
+                <a href="support.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Hilfe</a>
+                <!-- Mobiler Kontakt / Angebot einholen Button -->
+                <a href="contact.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 text-center font-semibold"
+                    title="Angebot einholen bei BestellDirekt">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Inhalt Sektion -->
+    <section class="bg-primary py-12 md:py-16 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-base font-semibold tracking-wide uppercase text-accent mb-2">Rechtliches & Vertrauen</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                Allgemeine Geschäftsbedingungen
+            </h1>
+            <p class="text-xl font-light max-w-4xl text-slate-300 mt-2">
+                Regeln und Bedingungen für die Nutzung unserer Lieferdienste und Dienstleistungen.
+            </p>
+            <p class="mt-4 text-sm font-medium text-slate-400">
+                Stand: 26. November 2025
+            </p>
+        </div>
+    </section>
+
+    <!-- Inhalt Sektion -->
+    <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto content-container">
+                <h2>§ 1 Geltungsbereich</h2>
+                <p>
+                    (1) Die nachfolgenden Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der Dienstleistungen
+                    der BestellDirekt UG (haftungsbeschränkt) – nachfolgend "Anbieter" – durch Kunden, sowohl Endkunden
+                    (B2C) als auch gewerbliche Kunden (B2B). Sie gelten für alle Verträge, die über die Website, die App
+                    oder andere Kommunikationskanäle des Anbieters abgeschlossen werden.
+                </p>
+                <p>
+                    (2) Abweichende Bedingungen des Kunden werden nur Vertragsbestandteil, wenn der Anbieter dies
+                    ausdrücklich schriftlich bestätigt. Allgemeine Geschäftsbedingungen des Kunden werden nicht
+                    anerkannt.
+                </p>
+
+                <h2>§ 2 Vertragspartner und Vertragsschluss</h2>
+                <p>
+                    (1) Vertragspartner ist die BestellDirekt UG (haftungsbeschränkt), Platanenallee 12, 87719
+                    Mindelheim, Deutschland, E-Mail: <a href="mailto:info@bestelldirekt.de">info@bestelldirekt.de</a>,
+                    Tel.: +49 15510 171103.
+                </p>
+                <p>
+                    (2) Die Präsentation der Produkte und Dienstleistungen auf der Website stellt kein verbindliches
+                    Angebot dar. Mit Absenden der Bestellung gibt der Kunde ein verbindliches Angebot auf Abschluss
+                    eines Vertrages ab.
+                </p>
+                <p>
+                    (3) Der Vertrag kommt zustande, sobald der Anbieter die Annahme der Bestellung per E-Mail oder über
+                    die Plattform bestätigt.
+                </p>
+
+                <h2>§ 3 Leistungen des Anbieters</h2>
+                <h3>3.1 Vermittlungsleistung (B2C)</h3>
+                <p>
+                    (1) Der Anbieter vermittelt Bestellungen von Endkunden an Partnerunternehmen (z. B. Einzelhandel,
+                    Gastronomie). Der Kaufvertrag über die Waren kommt ausschließlich zwischen dem Kunden und dem
+                    Partnerunternehmen zustande. Der Anbieter ist nicht Verkäufer der Waren.
+                </p>
+                <p>
+                    (2) Der Anbieter stellt Informationen über Produkte, Preise und Lieferbedingungen bereit, übernimmt
+                    jedoch keine Gewähr für die Verfügbarkeit der Waren beim Partnerunternehmen.
+                </p>
+
+                <h3>3.2 Logistikleistung (B2B und B2C)</h3>
+                <p>
+                    (1) Der Anbieter übernimmt die Abholung der Waren bei den Partnerunternehmen und die Lieferung an
+                    die vom Kunden angegebene Lieferadresse.
+                </p>
+                <p>
+                    (2) Lieferzeiten sind unverbindliche Angaben und können durch äußere Umstände (Verkehr, Wetter,
+                    Personalengpässe) variieren. Der Anbieter haftet nicht für Verzögerungen, außer in Fällen von grober
+                    Fahrlässigkeit oder Vorsatz.
+                </p>
+                <p>
+                    (3) Der Kunde ist verpflichtet, bei Lieferung anwesend zu sein oder eine Abstellgenehmigung zu
+                    erteilen. Erfolgt keine Annahme, können zusätzliche Kosten entstehen.
+                </p>
+
+                <h2>§ 4 Preise, Zahlungsbedingungen und Rechnungsstellung</h2>
+                <p>
+                    (1) Alle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer, soweit nicht anders
+                    angegeben.
+                </p>
+                <p>
+                    (2) Zusätzlich fallen Liefergebühren an, die abhängig von Lieferadresse, Entfernung und
+                    Partnerunternehmen variieren. Die Gebühren werden vor Abschluss der Bestellung angezeigt.
+                </p>
+                <p>
+                    (3) Zahlungen erfolgen über die auf der Plattform angebotenen Zahlungsarten. Der Kunde verpflichtet
+                    sich, die ausgewählte Zahlungsmethode ordnungsgemäß zu nutzen.
+                </p>
+                <p>
+                    (4) Rechnungen werden elektronisch bereitgestellt und sind innerhalb von 7 Tagen nach
+                    Rechnungsstellung zu begleichen, sofern nicht abweichend vereinbart.
+                </p>
+
+                <h2>§ 5 Rücktritt, Widerruf und Reklamationen</h2>
+                <p>
+                    (1) Verbraucher (B2C) haben ein gesetzliches Widerrufsrecht gemäß den Bestimmungen des
+                    Fernabsatzrechts, soweit es sich nicht um Lieferung verderblicher Waren oder personalisierter
+                    Produkte handelt.
+                </p>
+                <p>
+                    (2) Reklamationen sind unverzüglich nach Lieferung gegenüber dem Anbieter oder dem
+                    Partnerunternehmen schriftlich geltend zu machen. Bei berechtigten Reklamationen erfolgt
+                    Ersatzlieferung oder Erstattung.
+                </p>
+
+                <h2>§ 6 Haftung</h2>
+                <p>
+                    (1) Der Anbieter haftet uneingeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder
+                    der Gesundheit, die auf einer schuldhaften Pflichtverletzung des Anbieters oder seiner
+                    Erfüllungsgehilfen beruhen.
+                </p>
+                <p>
+                    (2) Für sonstige Schäden haftet der Anbieter nur bei grober Fahrlässigkeit oder Vorsatz. Eine
+                    Haftung für leichte Fahrlässigkeit ist ausgeschlossen, außer bei Verletzung wesentlicher
+                    Vertragspflichten.
+                </p>
+                <p>
+                    (3) Die Haftung ist begrenzt auf den vorhersehbaren, typischerweise eintretenden Schaden.
+                </p>
+
+                <h2>§ 7 Datenschutz</h2>
+                <p>
+                    (1) Der Anbieter erhebt, verarbeitet und nutzt personenbezogene Daten der Kunden ausschließlich im
+                    Rahmen der gesetzlichen Bestimmungen, insbesondere DSGVO. Details hierzu finden Sie in unserer <a
+                        href="datenschutz.html" class="text-accent underline">Datenschutzerklärung</a>.
+                </p>
+
+                <h2>§ 8 Eigentumsvorbehalt</h2>
+                <p>
+                    (1) Gelieferte Waren bleiben bis zur vollständigen Bezahlung Eigentum des Partnerunternehmens. Der
+                    Kunde ist verpflichtet, die Waren bis zur Eigentumsübertragung pfleglich zu behandeln.
+                </p>
+
+                <h2>§ 9 Schlussbestimmungen</h2>
+                <p>
+                    (1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.
+                </p>
+                <p>
+                    (2) Sollte eine Bestimmung dieser AGB unwirksam sein oder werden, so bleiben die übrigen
+                    Bestimmungen davon unberührt.
+                </p>
+                <p>
+                    (3) Gerichtsstand für alle Streitigkeiten aus diesen AGB ist, soweit gesetzlich zulässig,
+                    Mindelheim.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Spalte 1: Logo & Info + Social Links -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">Bestell<span>Direkt</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">Ihr zuverlässiger Lieferpartner für Unternehmen & Privatkunden
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-4 mt-2">
+                        <a href="https://www.instagram.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a.75.75 0 11.001 1.501A.75.75 0 0116.5 6.5zm-4.25 1.75a4.25 4.25 0 110 8.5 4.25 4.25 0 010-8.5zm0 1.5a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.6 9.87v-6.99h-2.42V12h2.42V9.66c0-2.39 1.43-3.7 3.62-3.7 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/4915510171103" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.52 3.48A11.89 11.89 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.65 6L0 24l6-1.65A11.85 11.85 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.03a10 10 0 01-5.13-1.38l-.36-.22-3.62.99.97-3.53-.23-.36A9.98 9.98 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.32-7.59c-.27-.13-1.6-.79-1.85-.88-.25-.09-.44-.13-.63.13-.19.27-.75.88-.92 1.06-.17.19-.33.21-.61.07-.27-.13-1.15-.43-2.18-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.31.41-.46.14-.16.19-.27.27-.45.09-.18.05-.34-.02-.46-.07-.12-.63-1.52-.86-2.09-.23-.55-.46-.48-.63-.49l-.54-.01c-.18 0-.46.07-.7.34-.24.27-.91.88-.91 2.14s.93 2.49 1.06 2.66c.13.18 1.83 2.8 4.44 3.93.62.27 1.1.43 1.48.55.62.19 1.19.16 1.64.1.5-.07 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spalte 2: Navigation -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Bereiche</h4>
+                    <ul class="space-y-3">
+                        <li><a href="b2b.html" class="text-gray-400 hover:text-white text-sm">B2B (Gewerbe)</a></li>
+                        <li><a href="b2c.html" class="text-gray-400 hover:text-white text-sm">B2C (Privatkunden)</a>
+                        </li>
+                        <li><a href="howto.html" class="text-gray-400 hover:text-white text-sm">So funktioniert's</a>
+                        </li>
+                        <li><a href="support.html" class="text-gray-400 hover:text-white text-sm">Hilfe</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 3: Rechtliches -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Rechtliches</h4>
+                    <ul class="space-y-3">
+                        <li><a href="agb.html"
+                                class="text-gray-400 hover:text-white text-sm font-bold border-b border-accent">AGB</a>
+                        </li>
+                        <li><a href="impressum.html" class="text-gray-400 hover:text-white text-sm">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="text-gray-400 hover:text-white text-sm">Datenschutz</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 4: Kontakt -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Kontakt</h4>
+                    <p class="text-gray-400 text-sm">
+                        BestellDirekt UG<br>
+                        Platanenallee 12<br>
+                        87719 Mindelheim<br>
+                        <a href="tel:+49123456789" class="hover:text-white block mt-2">Tel: +49 15510 171103</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-center text-sm text-gray-400">&copy; 2025 BestellDirekt GmbH. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Blockiere interne oder nicht-öffentliche Dateien (falls vorhanden)
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /config/
+Disallow: /private/
+
+# Verweise auf die Sitemap
+Sitemap: https://bestelldirekt24.de/sitemap.xml

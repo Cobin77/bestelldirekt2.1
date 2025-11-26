@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellDirekt | Hilfe & Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Konfigurieren der Hauptschriftart Inter */
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg-help {
+            /* Dunkler, professioneller Farbverlauf mit den neuen Farben */
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0f172a', /* NEU: Deep Navy / Slate-900 (Professionell, Autorität) */
+                        'secondary': '#1e3a8a', /* NEU: Strong Blue-800 (Tiefe, Kontrast) */
+                        'accent': '#06b6d4', /* NEU: Cyan-600 (Geschwindigkeit, Effizienz) */
+                    },
+                }
+            }
+        }
+
+        // JavaScript für das Öffnen/Schließen des mobilen Menüs
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="../../index.html" class="text-2xl font-bold text-primary tracking-tight">
+                    Bestell<span class="">Direkt</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="b2b.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2B
+                        (Gewerbe)</a>
+                    <a href="b2c.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">B2C
+                        (Privatkunden)</a>
+                    <a href="howto.html" class="text-gray-600 hover:text-primary transition duration-150 font-medium">So
+                        funktioniert's</a>
+                    <a href="support.html"
+                        class="text-secondary font-bold transition duration-150 border-b-2 border-secondary">Hilfe</a>
+                    <!-- Kontakt / Angebot einholen Button -->
+                    <a href="contact.html"
+                        class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+                        title="Angebot einholen bei BestellDirekt">Kontakt</a>
+                </div>
+
+                <!-- Mobiles Menü-Button -->
+                <div class="md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobiles Menü (ausgeblendet) -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="b2b.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2B
+                    (Gewerbe)</a>
+                <a href="b2c.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">B2C
+                    (Privatkunden)</a>
+                <a href="howto.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">So
+                    funktioniert's</a>
+                <a href="support.html" onclick="toggleMobileMenu()"
+                    class="text-secondary font-bold transition duration-150 border-b-2 border-secondary">Hilfe</a>
+                <!-- Mobiler Kontakt / Angebot einholen Button -->
+                <a href="contact.html" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 text-center font-semibold"
+                    title="Angebot einholen bei BestellDirekt">Angebot einholen</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-bg-help text-white py-20 md:py-32 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl font-extrabold mb-4">Hilfe & Support</h1>
+            <p class="text-xl sm:text-2xl text-slate-200 mb-8">
+                Hier finden Sie Antworten auf Ihre Fragen, Anleitungen, Tutorials und direkten Support.
+            </p>
+            <a href="#faq"
+                class="inline-block px-10 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-cyan-700 transition duration-300">Zu
+                den FAQs</a>
+        </div>
+    </section>
+
+    <!-- Suchfunktion -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Schnell zur Antwort</h2>
+            <p class="text-gray-600 mb-6">Geben Sie hier ein Stichwort ein und finden Sie direkt relevante Artikel.</p>
+            <input type="text" placeholder="Suchbegriff eingeben..."
+                class="w-full md:w-2/3 px-6 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent">
+        </div>
+    </section>
+
+    <!-- Kontaktmöglichkeiten -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Direkter Kontakt</h2>
+                <p class="mt-4 text-gray-500 max-w-2xl mx-auto">Wenn Sie Ihre Antwort hier nicht finden, kontaktieren
+                    Sie uns direkt.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-bold text-primary mb-2">WhatsApp Support</h3>
+                    <p class="text-gray-600 mb-4">Schnelle Antworten direkt auf WhatsApp.</p>
+                    <a href="https://wa.me/4917680741363" target="_blank"
+                        class="inline-block px-6 py-2 bg-secondary text-white rounded-lg transition duration-300">Jetzt
+                        chatten</a>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-bold text-primary mb-2">E-Mail Support</h3>
+                    <p class="text-gray-600 mb-4">Antworten innerhalb von 24 Stunden.</p>
+                    <a href="mailto:kontakt@bestelldirekt24.de"
+                        class="inline-block px-6 py-2 bg-secondary text-white rounded-lg transition duration-300">E-Mail
+                        schreiben</a>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-bold text-primary mb-2">Telefonischer Support</h3>
+                    <p class="text-gray-600 mb-4">Erreichbar werktags von 9:00–18:00 Uhr.</p>
+                    <a href="tel:+4917680741363"
+                        class="inline-block px-6 py-2 bg-secondary text-white rounded-lg transition duration-300">Anrufen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Accordion) -->
+    <section id="faq" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Häufig gestellte Fragen</h2>
+                <p class="mt-4 text-gray-500 max-w-2xl mx-auto">Antworten auf die am häufigsten gestellten Fragen.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="accordion-button w-full text-left font-semibold text-primary text-lg"
+                        onclick="toggleAccordion(this)">
+                        Wie kann ich meine Bestellung verfolgen?
+                    </button>
+                    <div class="accordion-content hidden mt-2 text-gray-600">
+                        Jede Bestellung erhält eine Sendungsverfolgungsnummer. Diese können Sie in Ihrem Kundenbereich
+                        oder per WhatsApp abrufen.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="accordion-button w-full text-left font-semibold text-primary text-lg"
+                        onclick="toggleAccordion(this)">
+                        Kann ich meine Bestellung ändern oder stornieren?
+                    </button>
+                    <div class="accordion-content hidden mt-2 text-gray-600">
+                        Bestellungen können innerhalb von 30 Minuten nach Abgabe geändert oder storniert werden. Danach
+                        ist die Bearbeitung bereits gestartet.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="accordion-button w-full text-left font-semibold text-primary text-lg"
+                        onclick="toggleAccordion(this)">
+                        Welche Zahlungsmethoden werden akzeptiert?
+                    </button>
+                    <div class="accordion-content hidden mt-2 text-gray-600">
+                        Wir akzeptieren Barzahlung bei Lieferung, PayPal, Klarna und Kreditkarte.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="accordion-button w-full text-left font-semibold text-primary text-lg"
+                        onclick="toggleAccordion(this)">
+                        Liefern Sie auch an Unternehmen?
+                    </button>
+                    <div class="accordion-content hidden mt-2 text-gray-600">
+                        Ja, wir haben spezielle B2B-Lieferoptionen mit optimierten Konditionen. Kontaktieren Sie uns
+                        direkt für ein Angebot.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides / Tutorials -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Guides & Tutorials</h2>
+                <p class="mt-4 text-gray-500 max-w-2xl mx-auto">Detaillierte Schritt-für-Schritt-Anleitungen.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-bold text-primary mb-2">Bestellung aufgeben</h3>
+                    <p class="text-gray-600 mb-4">So geben Sie Ihre Bestellung online oder per WhatsApp auf.</p>
+                    <a href="#" class="text-accent font-semibold hover:underline">Zum Guide</a>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-bold text-primary mb-2">Sendung verfolgen</h3>
+                    <p class="text-gray-600 mb-4">Erfahren Sie, wie Sie Ihre Sendung jederzeit verfolgen können.</p>
+                    <a href="#" class="text-accent font-semibold hover:underline">Zum Guide</a>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-bold text-primary mb-2">Zahlungen & Rechnungen</h3>
+                    <p class="text-gray-600 mb-4">Alle Zahlungsoptionen und Rechnungsverwaltung.</p>
+                    <a href="#" class="text-accent font-semibold hover:underline">Zum Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Spalte 1: Logo & Info + Social Links -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">Bestell<span>Direkt</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">Ihr zuverlässiger Lieferpartner für Unternehmen & Privatkunden
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-4 mt-2">
+                        <a href="https://www.instagram.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a.75.75 0 11.001 1.501A.75.75 0 0116.5 6.5zm-4.25 1.75a4.25 4.25 0 110 8.5 4.25 4.25 0 010-8.5zm0 1.5a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/bestelldirekt" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.6 9.87v-6.99h-2.42V12h2.42V9.66c0-2.39 1.43-3.7 3.62-3.7 1.05 0 2.15.19 2.15.19v2.36h-1.21c-1.19 0-1.56.74-1.56 1.5V12h2.66l-.43 2.88h-2.23v6.99A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/4915510171103" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.52 3.48A11.89 11.89 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.65 6L0 24l6-1.65A11.85 11.85 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22.03a10 10 0 01-5.13-1.38l-.36-.22-3.62.99.97-3.53-.23-.36A9.98 9.98 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.32-7.59c-.27-.13-1.6-.79-1.85-.88-.25-.09-.44-.13-.63.13-.19.27-.75.88-.92 1.06-.17.19-.33.21-.61.07-.27-.13-1.15-.43-2.18-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.31.41-.46.14-.16.19-.27.27-.45.09-.18.05-.34-.02-.46-.07-.12-.63-1.52-.86-2.09-.23-.55-.46-.48-.63-.49l-.54-.01c-.18 0-.46.07-.7.34-.24.27-.91.88-.91 2.14s.93 2.49 1.06 2.66c.13.18 1.83 2.8 4.44 3.93.62.27 1.1.43 1.48.55.62.19 1.19.16 1.64.1.5-.07 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spalte 2: Navigation -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Bereiche</h4>
+                    <ul class="space-y-3">
+                        <li><a href="b2b.html" class="text-gray-400 hover:text-white text-sm">B2B (Gewerbe)</a></li>
+                        <li><a href="b2c.html" class="text-gray-400 hover:text-white text-sm">B2C (Privatkunden)</a>
+                        </li>
+                        <li><a href="howto.html" class="text-gray-400 hover:text-white text-sm">So funktioniert's</a>
+                        </li>
+                        <li><a href="support.html"
+                                class="text-gray-400 hover:text-white text-sm font-bold border-b border-accent">Hilfe</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 3: Rechtliches -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Rechtliches</h4>
+                    <ul class="space-y-3">
+                        <li><a href="impressum.html" class="text-gray-400 hover:text-white text-sm">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="text-gray-400 hover:text-white text-sm">Datenschutz</a>
+                        </li>
+                        <li><a href="agb.html" class="text-gray-400 hover:text-white text-sm">AGB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spalte 4: Kontakt -->
+                <div>
+                    <h4 class="text-base font-semibold text-white tracking-wider uppercase mb-4">Kontakt</h4>
+                    <p class="text-gray-400 text-sm">
+                        BestellDirekt UG<br>
+                        Platanenallee 12<br>
+                        87719 Mindelheim<br>
+                        <a href="tel:+49123456789" class="hover:text-white block mt-2">Tel: +49 15510 171103</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-center text-sm text-gray-400">&copy; 2025 BestellDirekt GmbH. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isOpen = !content.classList.contains('hidden');
+            document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
+            if (!isOpen) content.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+
+</html>
