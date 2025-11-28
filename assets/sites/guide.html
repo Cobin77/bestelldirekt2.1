@@ -5,15 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestellDirekt | Guides & Tutorials</title>
+    <meta name="description"
+        content="BestellDirekt – Guides & Tutorials für Privatkunden und Unternehmen. Lernen Sie, wie Sie unsere Services optimal nutzen, Bestellungen effizient abwickeln und Ihr Erlebnis verbessern.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="BestellDirekt – Guides & Tutorials">
+    <meta property="og:description"
+        content="Entdecken Sie unsere Schritt-für-Schritt-Anleitungen und Tutorials, um BestellDirekt optimal zu nutzen.">
+    <meta property="og:image" content="../images/social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://bestelldirekt24.de/assets/sites/guide.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon / Icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../images/favicons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../images/favicons/favicon-64.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../images/favicons/android-chrome-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../images/favicons/android-chrome-512.png">
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+
+    <!-- Webmanifest für PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Konfigurieren der Hauptschriftart Inter */
         html {
             font-family: 'Inter', sans-serif;
         }
 
         .hero-bg-guides {
-            /* Dunkler, professioneller Farbverlauf mit den neuen Farben */
             background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
         }
     </style>
@@ -22,21 +47,21 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#0f172a', /* NEU: Deep Navy / Slate-900 (Professionell, Autorität) */
-                        'secondary': '#1e3a8a', /* NEU: Strong Blue-800 (Tiefe, Kontrast) */
-                        'accent': '#06b6d4', /* NEU: Cyan-600 (Geschwindigkeit, Effizienz) */
+                        'primary': '#0f172a',
+                        'secondary': '#1e3a8a',
+                        'accent': '#06b6d4',
                     },
                 }
             }
         }
 
-        // JavaScript für das Öffnen/Schließen des mobilen Menüs
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
     </script>
 </head>
+
 
 <body class="bg-gray-50 text-gray-800">
 
@@ -46,7 +71,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <a href="../../index.html" class="text-2xl font-bold text-primary tracking-tight">
-                    Bestell<span class="text-accent">Direkt</span>
+                    BestellDirekt<span class="text-secondary">24</span>
                 </a>
 
                 <!-- Desktop Navigation -->
